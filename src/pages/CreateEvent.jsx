@@ -5,7 +5,7 @@ export default function CreateEvent() {
         <>
             <Navbar />
             <section>
-                <div class="max-w-md mx-auto p-6 bg-F8F8FA rounded-lg">
+                <div class="w-[813px] mx-auto p-6 bg-F8F8FA rounded-lg">
                     <h2 class="background: #F2F2F266;
                         font-bold text-gray-800 mb-6  text-4xl text-center">Create Event</h2>
 
