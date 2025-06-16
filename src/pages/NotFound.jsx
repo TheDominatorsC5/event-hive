@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import notfound from "../assets/images/not-found.png"
 import { Instagram, Facebook, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Link } from "react-router";
 
 export default function NotFound() {
     return (
@@ -15,7 +16,9 @@ export default function NotFound() {
 
                     <p className="text-xl text-zinc-500 pt-8">We can’t seem to find the page you are looking for</p>
 
-                    <button className="rounded-3xl bg-[#7848F4] py-2 px-4 my-16 text-sm text-white">Back to Homepage</button>
+                    <Link to="/">
+                    <button className="rounded-3xl bg-[#7848F4] py-2 px-4 my-16 text-sm text-white cursor-pointer">Back to Homepage</button>
+                    </Link>
 
                     <p className="pb-4">Follow us on</p>
 

@@ -3,7 +3,7 @@ import collegeimage from "../assets/images/college-image.png"
 export default function CollegeDetail() {
     return (
         <div>
-            <div>
+            <div className="w-[97%] mx-auto">
                 <img src={collegeimage} alt=" college image" />
             </div>
 
