@@ -1,4 +1,4 @@
-import eventLocationImage from '../assets/images/event-location.png'
+import eventLocationImage from '../assets/images/eventLocation.png'
 import faceBookImage from '../assets/images/faceBook.png'
 import whatsAppImage from '../assets/images/whatsApp.png'
 import linkedInImage from '../assets/images/linkedIn.png' 
@@ -7,7 +7,7 @@ import twitter from '../assets/images/twitter.png'
 export default function EventDetail() {
     return (
         <div>
-            <div className="bg-[url(./assets/images/event-details.png)] text-white relative min-h-[595px] mx-6 px-6 flex items-center justify-center bg-cover bg-center bg-no-repeat inset-0 bg-black opacity-40">
+            <div className="bg-[url(./assets/images/eventDetails.png)] text-white relative min-h-[595px] mx-6 px-6 flex items-center justify-center bg-cover bg-center bg-no-repeat inset-0 bg-black opacity-40">
 
                 <div className='w-[540px]'>
                     <button className='bg-[#7848F4] py-[10px] px-[10px]'><span>◀</span> Back</button>

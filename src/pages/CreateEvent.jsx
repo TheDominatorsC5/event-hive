@@ -11,7 +11,7 @@ export default function CreateEvent() {
 
                     <form>
                         <div class="mb-4">
-                            <label htmlFor="eventTitle" class="block text-sm font-medium text-gray-700 mb-1">Event Title</label>
+                            <label htmlFor="eventTitle" class="block text-xs font-medium text-gray-700 mb-1">Event Title</label>
                             <input
                                 type="text"
                                 id="eventTitle"
@@ -21,7 +21,7 @@ export default function CreateEvent() {
                         </div>
 
                         <div class="mb-4">
-                            <label htmlFor="eventVenue" class="block text-sm font-medium text-gray-700 mb-1">Event Venue</label>
+                            <label htmlFor="eventVenue" class="block text-xs font-medium text-gray-700 mb-1">Event Venue</label>
                             <input
                                 type="text"
                                 id="eventVenue"
@@ -32,7 +32,7 @@ export default function CreateEvent() {
 
                         <div class="mb-4 flex flex-col sm:flex-row gap-4">
                             <div class="flex-1">
-                                <label htmlFor="startTime" class="block text-sm font-medium text-gray-700 mb-1">Start Time</label>
+                                <label htmlFor="startTime" class="block text-xs font-medium text-gray-700 mb-1">Start Time</label>
                                 <input
                                     type="time"
                                     id="startTime"
@@ -40,7 +40,7 @@ export default function CreateEvent() {
                                 />
                             </div>
                             <div class="flex-1">
-                                <label htmlFor="endTime" class="block text-sm font-medium text-gray-700 mb-1">End Time</label>
+                                <label htmlFor="endTime" class="block text-xs font-medium text-gray-700 mb-1">End Time</label>
                                 <input
                                     type="time"
                                     id="endTime"
@@ -51,7 +51,7 @@ export default function CreateEvent() {
 
                         <div class="mb-4 flex flex-col sm:flex-row gap-4">
                             <div class="flex-1">
-                                <label htmlFor="startDate" class="block text-sm font-medium text-gray-700 mb-1">Start Date</label>
+                                <label htmlFor="startDate" class="block text-xs font-medium text-gray-700 mb-1">Start Date</label>
                                 <input
                                     type="date"
                                     id="startDate"
@@ -59,7 +59,7 @@ export default function CreateEvent() {
                                 />
                             </div>
                             <div class="flex-1">
-                                <label htmlFor="endDate" class="block text-sm font-medium text-gray-700 mb-1">End Date</label>
+                                <label htmlFor="endDate" class="block text-xs font-medium text-gray-700 mb-1">End Date</label>
                                 <input
                                     type="date"
                                     id="endDate"
@@ -72,7 +72,7 @@ export default function CreateEvent() {
                     <h2 class="text-gray-800 mt-8 mb-6 text-4xl text-center font-semibold">Event Details</h2>
 
                     <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Event Image</label>
+                        <label class="block text-xs font-medium text-gray-700 mb-1">Event Image</label>
                         <input type="file" id="eventImageUpload" class="hidden" /> {/* Corrected to type="file" and hidden */}
                         <label
                             htmlFor="eventImageUpload"
@@ -80,11 +80,11 @@ export default function CreateEvent() {
                         >
                             Choose File
                         </label>
-                        {}
+                        {/* Use React state here to display the chosen file name or a preview */}
                     </div>
 
                     <div class="mb-4">
-                        <label htmlFor="eventDescription" class="block text-sm font-medium text-gray-700 mb-1">Event Description</label>
+                        <label htmlFor="eventDescription" class="block text-xs font-medium text-gray-700 mb-1">Event Description</label>
                         <textarea
                             id="eventDescription"
                             rows="5"
@@ -92,6 +92,7 @@ export default function CreateEvent() {
                             class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm placeholder-gray-400"
                         ></textarea>
                     </div>
+                    <button className="bg-[#7848F4] w-full text-center text-white rounded text-base py-2">Create event</button>
                 </div>
             </section>
         </>
