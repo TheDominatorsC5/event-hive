@@ -1,8 +1,8 @@
-import eventLocationImage from '../assets/images/eventLocation.png'
-import faceBookImage from '../assets/images/faceBook.png'
-import whatsAppImage from '../assets/images/whatsApp.png'
-import linkedInImage from '../assets/images/linkedIn.png' 
-import twitter from '../assets/images/twitter.png'
+import eventLocationImage from '../assets/images/eventLocation.png';
+import faceBookImage from '../assets/images/faceBook.png';
+import whatsAppImage from '../assets/images/whatsApp.png';
+import linkedInImage from '../assets/images/linkedIn.png'; 
+import twitter from '../assets/images/twitter.png';
 import { ChevronLeft, MapPinCheck } from 'lucide-react';
 
 export default function EventDetail() {
