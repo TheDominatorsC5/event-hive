@@ -1,8 +1,29 @@
 import { Link } from 'react-router';
 import googleIcon from '../assets/images/google-icon.png';
 import loginImage from '../assets/images/login.png';
+import SubmitButton from '../components/SubmitButton';
+import { apiClient } from '../api/client';
+import { useNavigate } from 'react-router';
 
 export default function Login() {
+    const navigate = useNavigate();
+
+    const loginUser = async (data) => {
+        try {
+            const response = await apiClient.post("/users/login", data, {
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            });
+            console.log(response);
+            localStorage.setItem("ACCESS_TOKEN", response.data.data.accesstoken);
+            navigate("/");
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100 ">
             <div className="flex w-full max-w-5xl shadow-lg rounded-lg overflow-hidden">
@@ -14,11 +35,12 @@ export default function Login() {
                         <h3 className="text-xl font-semibold text-center">Sign In to Event Hive</h3>
                     </div>
 
-                    <form className='flex flex-col items-center space-y-9'>
+                    <form action={loginUser} className='flex flex-col items-center space-y-9'>
                         <div className="w-full">
                             <label className="block mb-1">YOUR EMAIL</label>
                             <input
                                 type="email"
+                                name="email"
                                 placeholder="Enter your email"
                                 className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                             />
@@ -32,17 +54,16 @@ export default function Login() {
                             </div>
                             <input
                                 type="password"
+                                name="password"
                                 placeholder="Enter your password"
                                 className="w-full px-4 py-2 border bg-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                             />
 
                         </div>
-                        <button
-                            type="submit"
-                            className="w-full md:w-1/2 bg-primary text-white py-2 rounded-md hover:bg-primary transition cursor-pointer"
-                        >
-                            Sign In
-                        </button>
+                        <SubmitButton title={'Sign In'} className="w-full md:w-1/2 bg-primary text-white py-2 rounded-md hover:bg-primary transition cursor-pointer"
+                        />
+
+
                     </form>
 
                     <div className="my-6 text-center text-sm text-gray-400">Or</div>
