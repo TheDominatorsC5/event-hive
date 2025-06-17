@@ -1,8 +1,27 @@
 import { Link } from 'react-router';
 import googleIcon from '../assets/images/google-icon.png';
 import registerImage from '../assets/images/register.png';
+import SubmitButton from '../components/SubmitButton';
+import { apiClient } from '../api/client';
+import { useNavigate } from 'react-router';
 
 export default function Register() {
+    const navigate = useNavigate();
+
+    const registerUser = async (data) => {
+        try {
+            const response = await apiClient.post("/users/register", data, {
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            });
+            console.log(response);
+            navigate("/login");
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100 ">
             <div className="flex w-full max-w-5xl shadow-lg rounded-lg overflow-hidden">
@@ -27,11 +46,12 @@ export default function Register() {
                         <h3 className="text-xl font-semibold text-center">Sign Up to Event Hive</h3>
                     </div>
 
-                    <form className='flex flex-col items-center space-y-9'>
+                    <form action={registerUser} className='flex flex-col items-center space-y-9'>
                         <div className="w-full">
                             <label className="block mb-1">YOUR NAME</label>
                             <input
                                 type="text"
+                                name="name"
                                 placeholder="Enter your name"
                                 className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                             />
@@ -40,6 +60,7 @@ export default function Register() {
                             <label className="block mb-1">YOUR EMAIL</label>
                             <input
                                 type="email"
+                                name="email"
                                 placeholder="Enter your email"
                                 className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                             />
@@ -48,24 +69,23 @@ export default function Register() {
                             <label className="block mb-1">PASSWORD</label>
                             <input
                                 type="password"
+                                name="password"
                                 placeholder="Enter your password"
                                 className="w-full px-4 py-2 border bg-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                             />
                         </div>
-                         <div className="w-full">
+                        {/* <div className="w-full">
                             <label className="block mb-1">CONFIRM PASSWORD</label>
                             <input
                                 type="password"
                                 placeholder="Enter your password"
                                 className="w-full px-4 py-2 border bg-white border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                             />
-                        </div>
-                        <button
-                            type="submit"
+                        </div> */}
+                        <SubmitButton
                             className="w-full md:w-1/2 bg-primary text-white py-2 rounded-md hover:bg-primary transition cursor-pointer"
-                        >
-                            Sign Up
-                        </button>
+                            title={"Sign Up"} />
+
                     </form>
 
                     <div className="my-6 text-center text-sm text-gray-400">Or</div>
