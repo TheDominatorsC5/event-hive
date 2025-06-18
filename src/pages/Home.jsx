@@ -14,6 +14,7 @@ import uber from "../assets/images/uber.png";
 import grab from "../assets/images/grab.png";
 import TrendingColleges from "../components/TrendingColleges";
 import OurBlogs from "../components/OurBlogs";
+import { Link } from "react-router";
 
 export default function Home() {
     return (
@@ -21,9 +22,6 @@ export default function Home() {
             <Navbar />
             <HeroWithFilter />
             <UpcomingEvents />
-            <div>
-                <button className="border">Loading more</button>
-            </div>
             {/* Make your own event section goes here */}
             <div className="bg-navy-blue flex items-center w-full px-10 ">
                 <div>
@@ -32,7 +30,7 @@ export default function Home() {
                 <div className="text-white">
                     <h1 className="font-semibold text-2xl">Make your own Event</h1>
                     <h5 className="text-xs mt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h5>
-                    <button className="rounded-xm py-1 px-8 text-xs bg-primary mt-2 ">Create Event</button>
+                   <Link to="/create-event" ><button className="rounded-xm py-1.5 px-8 text-[10px] bg-primary mt-2 ">Create Event</button></Link>
                 </div>
 
 
