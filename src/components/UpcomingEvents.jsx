@@ -1,6 +1,28 @@
 import EventCard from "./EventCard";
+import useSWR from "swr";
+import { apiFetcher } from "../api/client";
+import { BeatLoader } from "react-spinners";
 
 export default function UpcomingEvents() {
+    const {data, isLoading, error} = useSWR("/events?limit=6", apiFetcher);
+
+    if (isLoading) {
+        return (
+        <div>
+            <BeatLoader size={100}/>
+        </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div>
+                <p>something went wrong</p>
+            </div>
+        )
+    }
+
+
     return (
         <section className="mt-20 w-[90%] mx-auto">
             <div className="flex row justify-between">
@@ -41,7 +63,7 @@ export default function UpcomingEvents() {
                  </div>
 
                 <div className="grid grid-cols-3 gap-5">
-                    {[1, 2, 3, 4, 5, 6].map(n => <EventCard key={n} />)}
+                    {data.data.map(event => <EventCard key={event.id} event={event} />)}
                 </div>
                 <div className="text-center mt-4" >
                     <button className="bg-primary rounded-sm text-white text-[10px] border-0 px-8 
