@@ -5,7 +5,11 @@ export const apiClient = axios.create({
 });
 
 export const apiFetcher = async (url) => {
-   const response = await apiClient.get(url);
+   const response = await apiClient.get(url, {
+    headers: {
+        Authorization: `Bear ${localStorage.getItem("ACCESS_TOKEN")}`
+    }
+   });
    return response.data;
 }
 
