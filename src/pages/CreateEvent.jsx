@@ -96,7 +96,7 @@ export default function CreateEvent() {
 
                         <div class="mb-4">
                             <label class="block text-xs font-medium text-gray-700 mb-1">Event Image</label>
-                            <input type="file" id="eventImageUpload" class="hidden" /> {/* Corrected to type="file" and hidden */}
+                            <input name="image" type="file" id="eventImageUpload" class="hidden" /> {/* Corrected to type="file" and hidden */}
                             <label
                                 htmlFor="eventImageUpload"
                                 class="cursor-pointer flex items-center justify-center w-full h-30 px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#7848F4] bg-[#F2F2F266]"
