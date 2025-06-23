@@ -1,7 +1,7 @@
 import eventLocationImage from '../assets/images/eventLocation.png';
 import faceBookImage from '../assets/images/faceBook.png';
 import whatsAppImage from '../assets/images/whatsApp.png';
-import linkedInImage from '../assets/images/linkedIn.png'; 
+import linkedInImage from '../assets/images/linkedIn.png';
 import twitter from '../assets/images/twitter.png';
 import { ChevronLeft, MapPinCheck } from 'lucide-react';
 
@@ -10,7 +10,7 @@ export default function EventDetail() {
         <div>
             <div className="bg-[url(./assets/images/eventDetails.png)] md:mx-6 rounded text-white relative min-h-[595px] py-6 px-6 md:flex items-center justify-around md:gap-10 lg:gap-64 bg-cover bg-center bg-no-repeat">
 
-            <div className='absolute inset-0 bg-black opacity-70'></div>
+                <div className='absolute inset-0 bg-black opacity-70'></div>
 
                 <div className='relative z-10 w-full md:w-[540px] mb-12 md:mb-20 px-4 md:px-0'>
 
@@ -54,9 +54,9 @@ export default function EventDetail() {
                 <div className='w-full md:w-[480px]'>
                     <h2 className='text-2xl font-bold mb-4'>Event Location</h2>
                     <img
-                    src={eventLocationImage}
-                    alt="Event location map"
-                    className='w-full md:w-[480px] min-h-[260px]' />
+                        src={eventLocationImage}
+                        alt="Event location map"
+                        className='w-full md:w-[480px] min-h-[260px]' />
                     <h2 className='font-semibold text-2xl mt-6 mb-4'>Dream world wide in jakatra</h2>
                     <p>Dummy location generation model by RSU ... Our approach generates more realistic dummy locations </p>
                     <h2 className='text-2xl font-bold mt-6 mb-4'>Tags</h2>
@@ -75,28 +75,28 @@ export default function EventDetail() {
 
                     <h2 className='text-2xl font-bold my-6'>Share with friends</h2>
                     <div className='flex gap-5'>
-                        <img 
-                        src={faceBookImage} 
-                        alt="Facebook image link"
-                        className='w-10 h-10 md:w-12 md:h-12' />
+                        <img
+                            src={faceBookImage}
+                            alt="Facebook image link"
+                            className='w-10 h-10 md:w-12 md:h-12' />
 
-                        <img 
-                        src={whatsAppImage} 
-                        alt="WhatsApp image link"
-                        className='w-10 h-10 md:w-12 md:h-12' />
+                        <img
+                            src={whatsAppImage}
+                            alt="WhatsApp image link"
+                            className='w-10 h-10 md:w-12 md:h-12' />
 
-                        <img 
-                        src={linkedInImage} 
-                        alt="LinkedIn image link"
-                        className='w-10 h-10 md:w-12 md:h-12' />
+                        <img
+                            src={linkedInImage}
+                            alt="LinkedIn image link"
+                            className='w-10 h-10 md:w-12 md:h-12' />
 
-                        <img 
-                        src={twitter} 
-                        alt="Twitter image link"
-                        className='w-10 h-10 md:w-12 md:h-12' />
+                        <img
+                            src={twitter}
+                            alt="Twitter image link"
+                            className='w-10 h-10 md:w-12 md:h-12' />
 
                     </div>
-            </div>
+                </div>
 
             </div>
         </div>

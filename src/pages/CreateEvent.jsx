@@ -96,11 +96,7 @@ export default function CreateEvent() {
 
                         <div class="mb-4">
                             <label class="block text-xs font-medium text-gray-700 mb-1">Event Image</label>
-<<<<<<< HEAD
                             <input type="file" id="eventImageUpload" class="hidden" /> {/* Corrected to type="file" and hidden */}
-=======
-                            <input type="file" name="image" id="eventImageUpload" class="hidden" /> {/* Corrected to type="file" and hidden */}
->>>>>>> 216ec3e3fb137848e3fb765a81c29a583ff0e4a6
                             <label
                                 htmlFor="eventImageUpload"
                                 class="cursor-pointer flex items-center justify-center w-full h-30 px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#7848F4] bg-[#F2F2F266]"
@@ -109,19 +105,6 @@ export default function CreateEvent() {
                             </label>
                             {/* Use React state here to display the chosen file name or a preview */}
                         </div>
-<<<<<<< HEAD
-
-                        <div class="mb-4">
-                            <label htmlFor="eventDescription" class="block text-xs font-medium text-gray-700 mb-1">Event Description</label>
-                            <textarea
-                                id="eventDescription"
-                                rows="5"
-                                placeholder="Provide a detailed description of your event..."
-                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#7848F4] focus:border-[#7848F4] sm:text-sm placeholder-gray-400"
-                            ></textarea>
-                        </div>
-                        <button className="bg-[#7848F4] w-full text-center text-white rounded text-base py-2">Create event</button>
-=======
 
                         <div class="mb-4">
                             <label htmlFor="eventDescription" class="block text-xs font-medium text-gray-700 mb-1">Event Description</label>
@@ -146,7 +129,6 @@ export default function CreateEvent() {
                         </div>
                         <SubmitButton className="bg-[#7848F4] w-full text-center text-white rounded text-base py-2" title={"Create Event"} />
 
->>>>>>> 216ec3e3fb137848e3fb765a81c29a583ff0e4a6
                     </form>
                 </div>
             </section>
